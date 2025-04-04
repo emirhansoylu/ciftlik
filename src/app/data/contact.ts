@@ -4,6 +4,6 @@ export const contactInfo = {
   whatsapp: '+90 545 544 2933',
   address: {
     street: 'Evci Mahallesi, Çatalköyak Küme Evleri No:20',
-    city: 'Mersin, Akdeniz'
+    city: 'Akdeniz, Mersin'
   }
 }; 

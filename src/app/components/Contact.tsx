@@ -22,13 +22,13 @@ export const Contact = ({ title, contactInfo }: ContactProps) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <a
             href={`tel:${contactInfo.phone}`}
-            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border border-primary/10"
           >
-            <div className="bg-primary p-4 rounded-full text-white mb-4 transform hover:scale-110 transition-transform duration-300">
-              <FaPhone className="text-2xl" />
+            <div className="bg-white p-5 rounded-full text-primary mb-4 transform hover:scale-110 transition-transform duration-300 border-2 border-primary">
+              <FaPhone className="text-3xl" />
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2 text-primary">Telefon</h3>
-            <p className="text-accent hover:text-accent-dark transition-colors duration-300 font-medium">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-primary">Telefon</h3>
+            <p className="text-lg text-accent hover:text-accent-dark transition-colors duration-300 font-medium mt-1">
               {contactInfo.phone}
             </p>
           </a>
@@ -37,31 +37,31 @@ export const Contact = ({ title, contactInfo }: ContactProps) => {
             href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border border-primary/10"
           >
-            <div className="bg-primary p-4 rounded-full text-white mb-4 transform hover:scale-110 transition-transform duration-300">
-              <FaWhatsapp className="text-2xl" />
+            <div className="bg-white p-5 rounded-full text-primary mb-4 transform hover:scale-110 transition-transform duration-300 border-2 border-primary">
+              <FaWhatsapp className="text-3xl" />
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2 text-primary">WhatsApp</h3>
-            <p className="text-accent hover:text-accent-dark transition-colors duration-300 font-medium">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-primary">WhatsApp</h3>
+            <p className="text-lg text-accent hover:text-accent-dark transition-colors duration-300 font-medium mt-1">
               {contactInfo.whatsapp}
             </p>
           </a>
 
           <a
-            href={`https://maps.app.goo.gl/stqo9x6NmbozsQq26`}
+            href="https://www.google.com/maps?q=36.88754,34.78861"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border border-primary/10"
           >
-            <div className="bg-primary p-4 rounded-full text-white mb-4 transform hover:scale-110 transition-transform duration-300">
-              <FaMapMarkerAlt className="text-2xl" />
+            <div className="bg-white p-5 rounded-full text-primary mb-4 transform hover:scale-110 transition-transform duration-300 border-2 border-primary">
+              <FaMapMarkerAlt className="text-3xl" />
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold mb-2 text-primary">Adres</h3>
-            <p className="text-text hover:text-accent transition-colors duration-300 font-medium">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-primary">Adres</h3>
+            <p className="text-lg text-text hover:text-accent transition-colors duration-300 font-medium mt-1">
               {contactInfo.address.street}
             </p>
-            <p className="text-text hover:text-accent transition-colors duration-300 font-medium">
+            <p className="text-lg text-text hover:text-accent transition-colors duration-300 font-medium mt-1">
               {contactInfo.address.city}
             </p>
           </a>
