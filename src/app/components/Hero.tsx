@@ -2,13 +2,12 @@ import Image from 'next/image';
 
 interface HeroProps {
   title: string;
-  subtitle: string;
   description: string;
   ctaText: string;
   galleryText: string;
 }
 
-export const Hero = ({ title, subtitle, description, ctaText, galleryText }: HeroProps) => {
+export const Hero = ({ title, description, ctaText, galleryText }: HeroProps) => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
@@ -32,7 +31,6 @@ export const Hero = ({ title, subtitle, description, ctaText, galleryText }: Her
         <div className="text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
             {title}<br />
-            <span className="text-secondary drop-shadow-lg">{subtitle}</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white max-w-2xl mx-auto drop-shadow-lg">
             {description}

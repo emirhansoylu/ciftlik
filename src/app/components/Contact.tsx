@@ -16,14 +16,11 @@ interface ContactProps {
 
 export const Contact = ({ title, contactInfo }: ContactProps) => {
   return (
-    <section id="contact" className="py-12 sm:py-16 px-4 bg-background-dark">
+    <section id="contact" className="py-12 sm:py-16 px-4 bg-background-dark pb-24 sm:pb-28">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-primary">{title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <a
-            href={`tel:${contactInfo.phone}`}
-            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border border-primary/10"
-          >
+          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
             <div className="bg-white p-5 rounded-full text-primary mb-4 transform hover:scale-110 transition-transform duration-300 border-2 border-primary">
               <FaPhone className="text-3xl" />
             </div>
@@ -31,14 +28,9 @@ export const Contact = ({ title, contactInfo }: ContactProps) => {
             <p className="text-lg text-accent hover:text-accent-dark transition-colors duration-300 font-medium mt-1">
               {contactInfo.phone}
             </p>
-          </a>
+          </div>
 
-          <a
-            href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border border-primary/10"
-          >
+          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
             <div className="bg-white p-5 rounded-full text-primary mb-4 transform hover:scale-110 transition-transform duration-300 border-2 border-primary">
               <FaWhatsapp className="text-3xl" />
             </div>
@@ -46,14 +38,9 @@ export const Contact = ({ title, contactInfo }: ContactProps) => {
             <p className="text-lg text-accent hover:text-accent-dark transition-colors duration-300 font-medium mt-1">
               {contactInfo.whatsapp}
             </p>
-          </a>
+          </div>
 
-          <a
-            href="https://www.google.com/maps?q=36.88754,34.78861"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer border border-primary/10"
-          >
+          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
             <div className="bg-white p-5 rounded-full text-primary mb-4 transform hover:scale-110 transition-transform duration-300 border-2 border-primary">
               <FaMapMarkerAlt className="text-3xl" />
             </div>
@@ -64,7 +51,7 @@ export const Contact = ({ title, contactInfo }: ContactProps) => {
             <p className="text-lg text-text hover:text-accent transition-colors duration-300 font-medium mt-1">
               {contactInfo.address.city}
             </p>
-          </a>
+          </div>
         </div>
       </div>
     </section>
