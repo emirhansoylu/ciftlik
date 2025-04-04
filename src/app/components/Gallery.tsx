@@ -18,6 +18,7 @@ interface GalleryProps {
 export const Gallery = ({ images, title, description }: GalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const basePath = process.env.NODE_ENV === 'production' ? '/ciftlik' : '';
 
   const handleImageClick = (index: number) => {
     setSelectedImage(index);
@@ -39,7 +40,7 @@ export const Gallery = ({ images, title, description }: GalleryProps) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!selectedImage) return;
-      
+
       if (e.key === 'ArrowLeft') {
         handlePrevious();
       } else if (e.key === 'ArrowRight') {
@@ -68,7 +69,7 @@ export const Gallery = ({ images, title, description }: GalleryProps) => {
               onClick={() => handleImageClick(index)}
             >
               <Image
-                src={image.src}
+                src={`${basePath}${image.src}`}
                 alt={image.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -85,7 +86,7 @@ export const Gallery = ({ images, title, description }: GalleryProps) => {
 
         {/* Lightbox */}
         {selectedImage !== null && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
@@ -98,35 +99,28 @@ export const Gallery = ({ images, title, description }: GalleryProps) => {
                 className="absolute -top-12 right-4 text-white hover:text-gray-300 bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
                 aria-label="Kapat"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-              <div className="relative aspect-[4/3] bg-black rounded-lg overflow-hidden">
+              <div className="relative aspect-[4/3]">
                 <Image
-                  src={images[selectedImage].src}
-                  alt={images[selectedImage].alt}
+                  src={`${basePath}${images[currentIndex].src}`}
+                  alt={images[currentIndex].alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                   className="object-contain"
                   priority
-                  quality={90}
                 />
-              </div>
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center bg-black bg-opacity-50 px-4 py-2 rounded-full">
-                <p className="text-sm">
-                  {selectedImage + 1} / {images.length}
-                </p>
               </div>
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   handlePrevious();
                 }}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
                 aria-label="Önceki"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
@@ -135,10 +129,10 @@ export const Gallery = ({ images, title, description }: GalleryProps) => {
                   e.stopPropagation();
                   handleNext();
                 }}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
                 aria-label="Sonraki"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>

@@ -8,12 +8,14 @@ interface HeroProps {
 }
 
 export const Hero = ({ title, description, ctaText, galleryText }: HeroProps) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/ciftlik' : '';
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-farm.jpg"
+          src={`${basePath}/hero-farm.jpg`}
           alt="Çiftliğimizden genel görünüm"
           fill
           priority
