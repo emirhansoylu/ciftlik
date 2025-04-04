@@ -1,9 +1,9 @@
 export const contactInfo = {
   title: 'İletişim',
-  phone: '+90 555 123 4567',
-  whatsapp: '+90 555 123 4567',
+  phone: '+90 545 544 2933',
+  whatsapp: '+90 545 544 2933',
   address: {
-    street: 'Çiftlik Mahallesi, Çiftlik Sokak No:1',
-    city: 'Şehir, İlçe'
+    street: 'Evci Mahallesi, Çatalköyak Küme Evleri No:20',
+    city: 'Mersin, Akdeniz'
   }
 }; 

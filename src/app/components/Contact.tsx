@@ -49,7 +49,7 @@ export const Contact = ({ title, contactInfo }: ContactProps) => {
           </a>
 
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactInfo.address.street + ', ' + contactInfo.address.city)}`}
+            href={`https://maps.app.goo.gl/stqo9x6NmbozsQq26`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"

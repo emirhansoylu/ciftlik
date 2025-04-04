@@ -6,19 +6,19 @@ export const structuredData = {
   "description": "Kurban Bayramı için en iyi besili inekler. Sağlıklı ve besili hayvanlar, uygun fiyatlar.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Çiftlik Adresi",
-    "addressLocality": "Şehir",
-    "addressRegion": "Bölge",
-    "postalCode": "Posta Kodu",
+    "streetAddress": "Çatalkoyak Küme Evleri No:20",
+    "addressLocality": "Mersin",
+    "addressRegion": "Akdeniz",
+    "postalCode": "33500",
     "addressCountry": "TR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "LATITUDE",
-    "longitude": "LONGITUDE"
+    "latitude": "36.88754",
+    "longitude": "34.78861"
   },
   "url": "https://your-domain.com",
-  "telephone": "+90XXXXXXXXXX",
+  "telephone": "+905455442933",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
