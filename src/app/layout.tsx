@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
   display: 'swap',
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-domain.com'),
+  metadataBase: new URL('https://emirhansoylu.github.io'),
   title: {
     default: "Kurban Bayramı İçin En İyi Besili İnekler | Çiftlik",
     template: "%s | Çiftlik"
@@ -44,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    url: "https://your-domain.com",
+    url: "https://emirhansoylu.github.io",
     siteName: "Çiftlik",
     title: "Kurban Bayramı İçin En İyi Besili İnekler | Çiftlik",
     description: "Sağlıklı ve besili hayvanlarımızla hizmetinizdeyiz. Kaliteli ve güvenilir alışveriş için hemen iletişime geçin.",
@@ -80,7 +74,7 @@ export const metadata: Metadata = {
     yandex: 'your-yandex-verification-code',
   },
   alternates: {
-    canonical: 'https://your-domain.com',
+    canonical: 'https://emirhansoylu.github.io',
   },
   viewport: {
     width: "device-width",
@@ -102,9 +96,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        {/* Font Awesome for icons */}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        {/* Inter font from Google Fonts */}
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${inter.variable} antialiased font-inter`}>
         {children}
       </body>
     </html>

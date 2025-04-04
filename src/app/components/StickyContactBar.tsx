@@ -22,7 +22,7 @@ export const StickyContactBar = ({ contactInfo }: StickyContactBarProps) => {
                         href={`tel:${contactInfo.phone}`}
                         className="flex items-center justify-center gap-3 py-4 px-4 bg-white hover:bg-background transition-colors duration-300"
                     >
-                        <FaPhone className="text-primary text-2xl" />
+                        <i className="fas fa-phone text-primary text-2xl"></i>
                         <span className="text-base font-medium text-primary">Ara</span>
                     </a>
 
@@ -32,7 +32,7 @@ export const StickyContactBar = ({ contactInfo }: StickyContactBarProps) => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-3 py-4 px-4 bg-white hover:bg-background transition-colors duration-300"
                     >
-                        <FaWhatsapp className="text-primary text-2xl" />
+                        <i className="fab fa-whatsapp text-primary text-2xl"></i>
                         <span className="text-base font-medium text-primary">WhatsApp</span>
                     </a>
 
@@ -42,7 +42,7 @@ export const StickyContactBar = ({ contactInfo }: StickyContactBarProps) => {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-3 py-4 px-4 bg-white hover:bg-background transition-colors duration-300"
                     >
-                        <FaMapMarkerAlt className="text-primary text-2xl" />
+                        <i className="fas fa-map-marker-alt text-primary text-2xl"></i>
                         <span className="text-base font-medium text-primary">Konum</span>
                     </a>
                 </div>

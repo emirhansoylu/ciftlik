@@ -5,31 +5,31 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: false,
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#8B5E3B',
-          light: '#A67B5B',
-          dark: '#6B472D',
+          DEFAULT: '#16a34a',
+          dark: '#15803d',
+          light: '#22c55e',
         },
         secondary: {
-          DEFAULT: '#E8C078',
-          light: '#F0D4A0',
-          dark: '#D4A85C',
+          DEFAULT: '#0f766e',
+          dark: '#0e7490',
+          light: '#0d9488',
         },
         background: {
-          DEFAULT: '#F5F5DC',
-          dark: '#E5E5C8',
+          DEFAULT: '#f8fafc',
+          dark: '#f1f5f9',
         },
         accent: {
-          DEFAULT: '#4C7A44',
-          light: '#5D8B55',
-          dark: '#3B5A34',
+          DEFAULT: '#16a34a',
+          dark: '#15803d',
         },
         text: {
-          DEFAULT: '#333333',
-          light: '#666666',
+          DEFAULT: '#1e293b',
+          light: '#475569',
         },
       },
     },
