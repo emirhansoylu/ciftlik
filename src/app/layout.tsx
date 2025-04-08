@@ -34,24 +34,16 @@ export const metadata: Metadata = {
     "kurbanlık inek",
     "çiftlik hayvanları"
   ],
-  authors: [{ name: "Çiftlik" }],
-  creator: "Çiftlik",
-  publisher: "Çiftlik",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    url: "https://emirhansoylu.github.io",
+    url: "https://emirhansoylu.github.io/ciftlik",
     siteName: "Çiftlik",
     title: "Kurban Bayramı İçin En İyi Besili İnekler | Çiftlik",
     description: "Sağlıklı ve besili hayvanlarımızla hizmetinizdeyiz. Kaliteli ve güvenilir alışveriş için hemen iletişime geçin.",
     images: [
       {
-        url: "/hero-farm.jpg",
+        url: "hero-farm.jpg",
         width: 1200,
         height: 630,
         alt: "Çiftlik Manzarası - Kurban Bayramı İçin Besili İnekler",
@@ -62,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kurban Bayramı İçin En İyi Besili İnekler | Çiftlik",
     description: "Sağlıklı ve besili hayvanlarımızla hizmetinizdeyiz. Kaliteli ve güvenilir alışveriş için hemen iletişime geçin.",
-    images: ["/hero-farm.jpg"],
+    images: ["hero-farm.jpg"],
     creator: "@ciftlik",
   },
   robots: {
@@ -76,18 +68,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-  },
   alternates: {
-    canonical: 'https://emirhansoylu.github.io',
-  },
-  manifest: "/manifest.json",
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+    canonical: 'https://emirhansoylu.github.io/ciftlik',
+  }
 };
 
 export default function RootLayout({
@@ -100,7 +83,6 @@ export default function RootLayout({
       <head>
         {/* Font Awesome for icons */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
         {/* Inter font from Google Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
